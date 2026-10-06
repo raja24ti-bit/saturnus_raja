@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.saturnus_raja.P4.FourthActivity
 import com.example.saturnus_raja.P5.FifthActivity
 import com.example.saturnus_raja.databinding.ActivityMainBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -25,6 +26,8 @@ class MainActivity : AppCompatActivity() {
             insets
 
         }
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+
         binding.btnToFourth.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
 
@@ -36,9 +39,32 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+
         binding.btnToFifth.setOnClickListener {
             val intent = Intent(this, FifthActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.btnLogout.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Konfirmasi")
+                .setMessage("Apakah Anda yakin ingin Logout?")
+                .setPositiveButton("Ya") { dialog, _ ->
+
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+
+                    dialog.dismiss()
+                    val intent = Intent(this, AuthActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                .setNegativeButton("Batal") { dialog, _ ->
+                    dialog.dismiss()
+                    Log.e("Info Dialog","Anda memilih Tidak!")
+                }
+                .show()
         }
 
     }
