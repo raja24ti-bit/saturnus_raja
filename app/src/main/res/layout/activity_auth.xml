@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#849084"
+    android:background="#000000"
     tools:context=".AuthActivity">
 
     <ImageView
@@ -16,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/upin" />
+        app:srcCompat="@drawable/adidas" />
 
     <EditText
         android:id="@+id/username"
@@ -39,6 +39,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -50,8 +51,9 @@
         android:id="@+id/btnLogin"
         android:layout_width="194dp"
         android:layout_height="44dp"
-        android:backgroundTint="#3A4D3A"
+        android:backgroundTint="#FFFFFF"
         android:text="Login"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.46"
