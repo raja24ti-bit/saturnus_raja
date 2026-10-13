@@ -1,4 +1,4 @@
-package com.example.saturnus_raja.P2
+package com.example.saturnus_raja.Home.P2
 
 import android.os.Bundle
 import android.util.Log

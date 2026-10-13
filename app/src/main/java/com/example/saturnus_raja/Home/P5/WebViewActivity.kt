@@ -1,4 +1,4 @@
-package com.example.saturnus_raja.P5
+package com.example.saturnus_raja.Home.P5
 
 import android.os.Bundle
 import android.webkit.WebViewClient

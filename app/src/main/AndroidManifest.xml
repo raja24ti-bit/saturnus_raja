@@ -24,23 +24,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".P2.SecondActivity"
+            android:name=".Home.P2.SecondActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".P3.ThirdActivity"
+            android:name=".Home.P3.ThirdActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".P4.FourthActivity"
+            android:name=".Home.P4.FourthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".P5.FifthActivity"
+            android:name=".Home.P5.FifthActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".P5.WebViewActivity"
+            android:name=".Home.P5.WebViewActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
@@ -49,6 +49,14 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".AuthActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Home.P6.SixthActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".BaseActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

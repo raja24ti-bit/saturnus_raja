@@ -8,27 +8,15 @@
     android:background="#000000"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ini Halaman Main Activity!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.247" />
-
     <ImageView
         android:layout_width="325dp"
         android:layout_height="235dp"
         android:src="@drawable/vans"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.004" />
 
     <Button
         android:id="@+id/btnToFourth"
@@ -42,7 +30,7 @@
         app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737"
+        app:layout_constraintVertical_bias="0.669"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -58,19 +46,35 @@
         app:layout_constraintHorizontal_bias="0.93"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737" />
+        app:layout_constraintVertical_bias="0.669" />
+
+    <Button
+        android:id="@+id/btnToSixth"
+        android:layout_width="182dp"
+        android:layout_height="38dp"
+        android:backgroundTint="@color/white"
+        android:text="Pertemuan 6"
+        android:textColor="@color/black"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.748" />
 
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="178dp"
-        android:textColor="@color/black"
-
         android:layout_height="46dp"
-        android:layout_marginBottom="72dp"
+
+        android:layout_marginBottom="68dp"
         android:backgroundTint="@color/white"
         android:text="Logout"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

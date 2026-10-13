@@ -7,8 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.saturnus_raja.P4.FourthActivity
-import com.example.saturnus_raja.P5.FifthActivity
+import com.example.saturnus_raja.Home.P4.FourthActivity
+import com.example.saturnus_raja.Home.P5.FifthActivity
+import com.example.saturnus_raja.Home.P6.SixthActivity
 import com.example.saturnus_raja.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
@@ -42,6 +43,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnToFifth.setOnClickListener {
             val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToSixth.setOnClickListener {
+            val intent = Intent(this, SixthActivity::class.java)
             startActivity(intent)
         }
 

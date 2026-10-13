@@ -2,14 +2,11 @@ package com.example.saturnus_raja
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.saturnus_raja.P5.WebViewActivity
 import com.example.saturnus_raja.databinding.ActivityAuthBinding
-import com.example.saturnus_raja.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class AuthActivity : AppCompatActivity() {
@@ -44,7 +41,7 @@ class AuthActivity : AppCompatActivity() {
             editor.apply()
 
             if (username == password){
-                val i = Intent(this, MainActivity::class.java)
+                val i = Intent(this, BaseActivity::class.java)
                 startActivity(i)
                 finish()
             }else{
