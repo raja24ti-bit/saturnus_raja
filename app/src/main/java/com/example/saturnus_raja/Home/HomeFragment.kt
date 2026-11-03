@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.example.saturnus_raja.AuthActivity
+import com.example.saturnus_raja.Home.P10.TenActivity
 import com.example.saturnus_raja.Home.P4.FourthActivity
 import com.example.saturnus_raja.Home.P5.FifthActivity
 import com.example.saturnus_raja.Home.P6.SixthActivity
@@ -58,6 +59,11 @@ class HomeFragment : Fragment() {
 
         binding.btnToSixth.setOnClickListener {
             val intent = Intent(requireContext(), SixthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToten.setOnClickListener {
+            val intent = Intent(requireContext(), TenActivity::class.java)
             startActivity(intent)
         }
 
