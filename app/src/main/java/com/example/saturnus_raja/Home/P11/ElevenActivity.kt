@@ -58,7 +58,12 @@ class ElevenActivity : AppCompatActivity() {
                     val badge = tab.getOrCreateBadge()
                     badge.isVisible = true
                 }
-                2 -> tab.text = "Produk"
+                2 -> {
+                    tab.text = "Produk"
+                    tab.icon = ContextCompat.getDrawable(  this, R.drawable.ic_roket)
+                    val badge = tab.getOrCreateBadge()
+                    badge.isVisible = true
+                }
             }
         }.attach()
     }
