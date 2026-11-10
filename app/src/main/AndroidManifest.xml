@@ -64,6 +64,10 @@
             android:exported="false"
             android:theme="@style/Theme.Pertemuan_2"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Home.P11.ElevenActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
