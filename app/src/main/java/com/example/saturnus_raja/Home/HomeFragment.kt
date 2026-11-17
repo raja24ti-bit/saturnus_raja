@@ -9,7 +9,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.example.saturnus_raja.AuthActivity
+import com.example.saturnus_raja.Data.Api.CatFactApiClient
 import com.example.saturnus_raja.Home.P10.TenActivity
 import com.example.saturnus_raja.Home.P11.ElevenActivity
 import com.example.saturnus_raja.Home.P4.FourthActivity
@@ -18,6 +20,7 @@ import com.example.saturnus_raja.Home.P6.SixthActivity
 import com.example.saturnus_raja.R
 import com.example.saturnus_raja.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -37,6 +40,7 @@ class HomeFragment : Fragment() {
         (requireActivity() as AppCompatActivity).supportActionBar?.apply {
             title = "Home"
         }
+
         super.onViewCreated(view, savedInstanceState)
 
         val sharedPref = requireContext().getSharedPreferences("user_pref", MODE_PRIVATE)
@@ -89,9 +93,23 @@ class HomeFragment : Fragment() {
                 }
                 .setNegativeButton("Batal") { dialog, _ ->
                     dialog.dismiss()
-                    Log.e("Info Dialog","Anda memilih Tidak!")
+                    Log.e("Info Dialog", "Anda memilih Tidak!")
                 }
                 .show()
+        }
+        binding.btnRefresh.setOnClickListener {
+            loadCatFact()
+        }
+        loadCatFact()
+    }
+    private fun loadCatFact() {
+        lifecycleScope.launch {
+            try {
+                val response = CatFactApiClient.apiService.getCatFact()
+                binding.tvCatFact.text = "\"${response.fact}\""
+            } catch (e: Exception) {
+                binding.tvCatFact.text = "Gagal mengambil fakta kucing."
+            }
         }
     }
 }
